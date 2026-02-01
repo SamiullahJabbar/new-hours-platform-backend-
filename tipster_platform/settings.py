@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-e^ae5*gr&cwd0&y&ayd1mcczwin@6tc*_+k9)8q($x)p2ok+j+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['admin.son400.com', '13.62.209.189', 'localhost', 'son400.com',]
 
 
 # Application definition
@@ -59,7 +60,16 @@ MIDDLEWARE = [
 
 
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = [ "http://localhost:5173"  ]
+# CORS_ALLOWED_ORIGINS = [ "http://localhost:5173"  ]
+CORS_ALLOWED_ORIGINS = [
+    "https://son400.com",
+    "https://www.son400.com",
+    "http://localhost:5173"
+]
+CSRF_TRUSTED_ORIGINS = [
+    "https://admin.son400.com",
+    "https://son400.com",
+]
 
 ROOT_URLCONF = 'tipster_platform.urls'
 
